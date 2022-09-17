@@ -1,10 +1,11 @@
 package com.kusitms.pablo.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import lombok.Getter;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Getter
 @Entity
 public class OrderList {
 
@@ -15,4 +16,7 @@ public class OrderList {
 
     @Column(name = "user_serial")
     public String userSerial;
+
+    @OneToMany(mappedBy = "orderList")
+    public List<OrderItem> orderItemList;
 }

@@ -1,7 +1,10 @@
 package com.kusitms.pablo.entity;
 
+import lombok.Getter;
+
 import javax.persistence.*;
 
+@Getter
 @Entity
 public class OrderItem {
 
