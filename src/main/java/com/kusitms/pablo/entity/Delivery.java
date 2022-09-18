@@ -15,6 +15,9 @@ public class Delivery {
     @Column(name = "admin_serial")
     public String adminSerial;
 
+    @Column(name = "user_serial")
+    public String userSerial;
+
     @OneToOne
     @JoinColumn(name = "order_list_pk")
     public OrderList orderList;
