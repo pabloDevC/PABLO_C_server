@@ -6,9 +6,12 @@ import com.kusitms.pablo.util.CommonResponse;
 import com.kusitms.pablo.util.ResponseCode;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.NoSuchElementException;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -28,5 +31,10 @@ public class DeliveryController {
         deliveryService.배달시작(reqDeliveryDto);
 
         return new CommonResponse<>(ResponseCode.SUCCESS);
+    }
+
+    @ExceptionHandler(NoSuchElementException.class)
+    public CommonResponse<?> handleNoSuchElementException(NoSuchElementException exception) {
+        return new CommonResponse<>(ResponseCode.NOT_FOUNT_ORDER);
     }
 }
