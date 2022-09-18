@@ -21,7 +21,7 @@ public class DeliveryController {
      * 배달 시작
      * [POST] /delivery
      * 작성자 : 장동호
-     * 수정일 :
+     * 수정일 : 2022-09-18
      */
     @PostMapping("/delivery")
     public CommonResponse<?> deliveryStart(@RequestBody ReqDeliveryDto reqDeliveryDto) {
