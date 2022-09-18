@@ -1,12 +1,10 @@
 package com.kusitms.pablo.order_list.controller;
 
-import com.kusitms.pablo.order_list.dto.Request.ReqDeliveryDto;
 import com.kusitms.pablo.order_list.dto.Response.RespOrderListDto;
 import com.kusitms.pablo.order_list.service.OrderListService;
 import com.kusitms.pablo.util.CommonResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor

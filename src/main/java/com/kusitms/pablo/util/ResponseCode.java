@@ -9,7 +9,10 @@ public enum ResponseCode {
     SUCCESS(true, HttpStatus.OK.value(), "요청에 성공하였습니다."),
 
     // Delivery
-    NOT_FOUNT_ORDER(false, HttpStatus.NOT_FOUND.value(), "존재하지 않는 주문입니다");
+    // 요청온 orderListPK 에 해당하는 OrderList 가 db에 존재하지 않을 때.
+    NOT_FOUNT_ORDER(false, HttpStatus.NOT_FOUND.value(), "존재하지 않는 주문입니다"),
+    // 유효하지 않은 요청값이 들어왔을 때.
+    INVALID_REQUEST(false, HttpStatus.BAD_REQUEST.value(), "잘못된 요청입니다.");
 
 
     private Boolean isSuccess;
