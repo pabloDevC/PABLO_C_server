@@ -1,6 +1,7 @@
 package com.kusitms.pablo.order_list.controller;
 
-import com.kusitms.pablo.order_list.dto.RespOrderListDto;
+import com.kusitms.pablo.order_list.dto.Request.ReqDeliveryDto;
+import com.kusitms.pablo.order_list.dto.Response.RespOrderListDto;
 import com.kusitms.pablo.order_list.service.OrderListService;
 import com.kusitms.pablo.util.CommonResponse;
 import lombok.RequiredArgsConstructor;
@@ -27,14 +28,5 @@ public class OrderListController {
         return new CommonResponse<>(respOrderListDto);
     }
 
-    /**
-     * 배달 시작
-     * [POST] /order_list
-     * 작성자 : 장동호
-     * 수정일 :
-     */
-    @PostMapping("/order_list")
-    public void deliveryStart() {
 
-    }
 }

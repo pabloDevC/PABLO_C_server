@@ -1,4 +1,4 @@
-package com.kusitms.pablo.order_list.dto;
+package com.kusitms.pablo.order_list.dto.Response;
 
 import com.kusitms.pablo.entity.OrderItem;
 import lombok.Data;
