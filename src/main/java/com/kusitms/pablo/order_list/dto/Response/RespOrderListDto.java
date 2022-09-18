@@ -1,4 +1,4 @@
-package com.kusitms.pablo.order_list.dto;
+package com.kusitms.pablo.order_list.dto.Response;
 
 import com.kusitms.pablo.entity.OrderList;
 import lombok.Data;
@@ -11,7 +11,7 @@ public class RespOrderListDto {
 
     public List<OrderDto> orderDtoList;
 
-    public RespOrderListDto entityToDto(List<OrderList> orderList) {
+    public RespOrderListDto toDto(List<OrderList> orderList) {
 
         orderDtoList = new ArrayList<>(orderList.size());
 
