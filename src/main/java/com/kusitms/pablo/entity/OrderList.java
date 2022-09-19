@@ -14,7 +14,8 @@ public class OrderList {
     @Column(name = "order_list_pk")
     public Long orderListPK;
 
-    @Column(name = "user_serial")
+
+    @Column(nullable = false, name = "user_serial")
     public String userSerial;
 
     @OneToMany(mappedBy = "orderList")

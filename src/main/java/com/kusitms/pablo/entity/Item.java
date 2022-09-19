@@ -15,6 +15,7 @@ public class Item {
     @Column(name = "item_pk")
     public Long itemPK;
 
-    @Column(name = "product_name")
+
+    @Column(nullable = false, name = "product_name")
     public String productName;
 }
