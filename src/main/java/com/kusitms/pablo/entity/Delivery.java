@@ -1,9 +1,15 @@
 package com.kusitms.pablo.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Entity
 public class Delivery {
