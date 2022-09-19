@@ -1,5 +1,5 @@
-insert into order_list(order_list_pk, user_serial) values (1, "serial_a");
-insert into order_list(order_list_pk, user_serial) values (2, "serial_b");
+insert into order_list(order_list_pk, user_serial) values (1, "userSerial_a");
+insert into order_list(order_list_pk, user_serial) values (2, "userSerial_b");
 
 insert into item(item_pk, product_name) values (1, "옷");
 insert into item(item_pk, product_name) values (2, "과자");

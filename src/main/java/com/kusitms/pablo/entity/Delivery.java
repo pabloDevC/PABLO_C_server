@@ -24,7 +24,7 @@ public class Delivery {
     @Column(nullable = false, name = "user_serial")
     public String userSerial;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name="order_list_pk")
     public OrderList orderList;
 }

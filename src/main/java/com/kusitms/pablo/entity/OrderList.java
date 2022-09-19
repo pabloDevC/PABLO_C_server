@@ -17,6 +17,6 @@ public class OrderList {
     @Column(nullable = false, name = "user_serial")
     public String userSerial;
 
-    @OneToMany(mappedBy = "orderList")
+    @OneToMany(mappedBy = "orderList", cascade = CascadeType.REMOVE)
     public List<OrderItem> orderItemList;
 }

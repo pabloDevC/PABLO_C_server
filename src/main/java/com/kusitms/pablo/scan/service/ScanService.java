@@ -19,10 +19,6 @@ public class ScanService {
 
         Delivery delivery = scanRepository.findByUserSerialAndAdminSerial(reqScanDto.getUserSerial(), reqScanDto.getAdminSerial());
 
-        //연관관계때문에 cascade불가능 / 주문상품을 안건드리고 orderlist delete가 불가능
-//        orderListRepository.deleteById(delivery.getOrderList().getOrderListPK());
-
-        scanRepository.delete(delivery);
-
+        scanRepository.deleteById(delivery.getDeliveryPK());
     }
 }

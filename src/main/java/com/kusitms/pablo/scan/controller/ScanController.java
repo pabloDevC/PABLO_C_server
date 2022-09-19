@@ -12,20 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 public class ScanController {
+
     private final ScanService scanService;
-
-
-    /**
-     * 
-     * [GET] /scan
-     * 작성자 : 고승원
-     * 수정일 :
-     */
-    @GetMapping("/scan")
-    public void asdf(){
-
-    }
-
 
     /**
      * qr코드스캔
@@ -41,7 +29,7 @@ public class ScanController {
     }
 
     
-    //userSerial이 delivery테이블에 없을 시 예외
+    //userSerial 이 delivery 테이블에 없을 시 예외
     @ExceptionHandler(NullPointerException.class)
     public CommonResponse<?> handleNullPointerException(NullPointerException exception){
         return new CommonResponse<>(ResponseCode.NOT_FOUND_DELIVERY);

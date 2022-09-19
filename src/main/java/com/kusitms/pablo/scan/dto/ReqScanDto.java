@@ -13,5 +13,4 @@ public class ReqScanDto {
     @NotBlank
     public String userSerial;
 
-
 }
