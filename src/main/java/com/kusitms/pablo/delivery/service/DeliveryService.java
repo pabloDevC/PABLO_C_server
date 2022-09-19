@@ -8,6 +8,7 @@ import com.kusitms.pablo.order_list.repository.OrderListRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.NoSuchElementException;
 
@@ -19,6 +20,7 @@ public class DeliveryService {
     private final DeliveryRepository deliveryRepository;
     private final OrderListRepository orderListRepository;
 
+    @Transactional
     public void 배달시작(ReqDeliveryDto reqDeliveryDto) {
 
         OrderList orderList = orderListRepository.findById(reqDeliveryDto.getOrderListPK()).orElseThrow(()-> new NoSuchElementException());

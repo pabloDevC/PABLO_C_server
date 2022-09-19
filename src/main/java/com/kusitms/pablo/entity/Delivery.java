@@ -18,7 +18,7 @@ public class Delivery {
     @Column(name = "delivery_pk")
     public Long deliveryPK;
 
-    @Column(nullable = false, name = "admin_serial")
+    @Column(nullable = false, unique = true, name = "admin_serial")
     public String adminSerial;
 
     @OneToOne
