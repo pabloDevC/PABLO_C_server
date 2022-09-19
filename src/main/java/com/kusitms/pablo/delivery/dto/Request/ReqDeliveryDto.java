@@ -19,6 +19,7 @@ public class ReqDeliveryDto {
     public Delivery toEntity(OrderList orderList) {
         return Delivery.builder()
                 .adminSerial(this.adminSerial)
+                .userSerial(orderList.getUserSerial())
                 .orderList(orderList)
                 .build();
     }
