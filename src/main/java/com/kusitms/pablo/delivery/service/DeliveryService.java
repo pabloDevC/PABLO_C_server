@@ -3,7 +3,7 @@ package com.kusitms.pablo.delivery.service;
 import com.kusitms.pablo.delivery.repository.DeliveryRepository;
 import com.kusitms.pablo.entity.Delivery;
 import com.kusitms.pablo.entity.OrderList;
-import com.kusitms.pablo.order_list.dto.Request.ReqDeliveryDto;
+import com.kusitms.pablo.delivery.dto.Request.ReqDeliveryDto;
 import com.kusitms.pablo.order_list.repository.OrderListRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

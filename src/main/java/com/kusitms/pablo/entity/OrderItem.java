@@ -12,7 +12,7 @@ public class OrderItem {
     @Column(name = "order_item_pk")
     public Long orderItemPK;
 
-    @Column(name = "product_count")
+    @Column(nullable = false, name = "product_count")
     public Long productCount;
 
     @ManyToOne
