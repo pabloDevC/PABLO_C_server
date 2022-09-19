@@ -6,6 +6,7 @@ import com.kusitms.pablo.util.CommonResponse;
 import com.kusitms.pablo.util.ResponseCode;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,5 +44,10 @@ public class DeliveryController {
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public CommonResponse<?> handleHttpMessageNotReadableException(HttpMessageNotReadableException exception) {
         return new CommonResponse<>(ResponseCode.INVALID_REQUEST);
+    }
+
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public CommonResponse<?> handleDataIntegrityViolationException(DataIntegrityViolationException exception) {
+        return new CommonResponse<>(ResponseCode.DUPLICATE_REQUEST);
     }
 }
