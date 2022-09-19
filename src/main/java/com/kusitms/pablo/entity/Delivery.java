@@ -12,13 +12,13 @@ public class Delivery {
     @Column(name = "delivery_pk")
     public Long deliveryPK;
 
-    @Column(name = "admin_serial")
+    @Column(nullable = false, unique = true, name = "admin_serial")
     public String adminSerial;
 
-    @Column(name = "user_serial")
+    @Column(nullable = false, name = "user_serial")
     public String userSerial;
 
     @OneToOne
-    @JoinColumn(name = "order_list_pk")
+    @JoinColumn(name="order_list_pk")
     public OrderList orderList;
 }

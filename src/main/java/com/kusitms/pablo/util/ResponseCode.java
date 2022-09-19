@@ -6,7 +6,10 @@ import org.springframework.http.HttpStatus;
 @Getter
 public enum ResponseCode {
     // Success
-    SUCCESS(true, HttpStatus.OK.value(), "요청에 성공하였습니다.");
+    SUCCESS(true, HttpStatus.OK.value(), "요청에 성공하였습니다."),
+
+    //Scan
+    NOT_FOUND_DELIVERY(false, HttpStatus.BAD_REQUEST.value(), "배달중이지 않은 회원입니다. ");
 
     // Common
 
