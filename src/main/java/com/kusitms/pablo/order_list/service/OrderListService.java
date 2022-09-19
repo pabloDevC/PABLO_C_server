@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class OrderListService {
 
-    private final OrderListRepository orderListRepository;
+    public final OrderListRepository orderListRepository;
 
     @Transactional(readOnly = true)
     public RespOrderListDto 주문내역() {
@@ -22,8 +22,7 @@ public class OrderListService {
 
         // Dto 생성 후, 가져온 주문 내역들 Dto 변환
         RespOrderListDto respOrderListDto = new RespOrderListDto();
-
-        respOrderListDto.toDto(orderList);
+        respOrderListDto.entityToDto(orderList);
 
         // Dto 변환된 주문 내역 반환
         return respOrderListDto;
