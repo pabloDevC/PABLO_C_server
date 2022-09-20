@@ -15,11 +15,11 @@ public class OrderItem {
     @Column(nullable = false, name = "product_count")
     public Long productCount;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_list_pk")
     public OrderList orderList;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_pk")
     public Item item;
 }
